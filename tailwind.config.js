@@ -75,6 +75,15 @@ export default {
     require("tailwindcss-animate"),
     require('tailwindcss-animated'),
     require('taos/plugin'),
+    function ({ addUtilities }) {
+      const newUtilities = {
+        '.internal-curve': {
+          'clip-path': 'path("M 0 0 Q 50 50, 100 0 Q 150 -50, 200 0 L 200 200 L 0 200 Z")',
+        },
+      }
+
+      addUtilities(newUtilities)
+    },
   ],
 
   safelist: [

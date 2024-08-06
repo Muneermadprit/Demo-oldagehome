@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import image1 from '../../assets/shirt1.png'
-import image2 from '../../assets/shirt2.png'
-import image3 from '../../assets/shirt3.png'
+import image1 from '../../assets/hero-old.jpg'
+import image2 from '../../assets/hero-old2.jpeg'
+import image3 from '../../assets/hero-old3.jpg'
 import image4 from '../../assets/shirt4.png'
 import image5 from '../../assets/shirt5.png'
 
@@ -13,33 +13,22 @@ function Topproducts() {
         {
             id:1,
             src:image1,
-            tittle:'Peter England',
+            tittle:'More Details',
            
         },
         {
             id:1,
             src:image2,
-            tittle:'Levi.s',
+            tittle:'More Details',
            
         },
         {
             id:1,
             src:image3,
-            tittle:'Allen Solly.',
+            tittle:'More Details.',
            
         },
-        {
-            id:1,
-            src:image4,
-            tittle:'Raymond',
-           
-        },
-        {
-            id:1,
-            src:image5,
-            tittle:'Tommy Hilfiger',
-           
-        }
+       
     ]
   useEffect(() => {
     AOS.init({ duration: 1200 });
@@ -49,16 +38,16 @@ function Topproducts() {
     <div>
       <div className='container'>
         {/* Header section */}
-        <div className='text-center mb-10 max-w-[600px] mx-auto'>
+        <div className='text-center  max-w-[400px] mx-auto mr-20'>
           <p data-aos='fade-up' data-aos-delay="200" className='text-sm text-primary'>
-            Top selling products for you
+            
           </p>
           <h1 data-aos='fade-up' data-aos-delay="200" className='text-3xl font-bold'>
-            Best Product
+            
           </h1>
         </div>
         {/* Body section */}
-        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 md:gap-10 place-items-center'>
+        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-5 md:gap-10 place-items-center mr-10 '>
         {topprodect.map((data, index) => (
   <div
     key={data.id}
@@ -68,10 +57,10 @@ function Topproducts() {
   >
     <img 
       src={data.src} 
-      className='w-[200px] h-auto mb-4 object-cover block mx-auto transform transition-transform duration-300 group-hover:scale-105' 
+      className='sm:w-[700px]  rounded-xl w-[200px] h-auto mb-4 object-cover block mx-auto transform transition-transform duration-300 group-hover:scale-105 ' 
       alt={`Product ${data.id}`} 
     />
-    <p className='bg-gray-100 p-2 rounded-xl'>{data.tittle}</p>
+    <p className='bg-gray-100  rounded-xl'>{data.tittle}</p>
   </div>
 ))}
 

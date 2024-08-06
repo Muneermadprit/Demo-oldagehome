@@ -78,7 +78,7 @@ function Testimonial() {
         }
     ]
   return (
-    <div className='py-10 mb-10'> 
+    <div className='py-10 mt-[700px]'> 
         <div className='container'>
             <div>
                 {/* header section */}

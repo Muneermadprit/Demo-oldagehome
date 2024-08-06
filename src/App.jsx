@@ -7,13 +7,15 @@ import Banner from './components/Navbar/bannner'
 import Subscription from './components/Navbar/subscription'
 import Testimonial from './components/Navbar/testimonial'
 import Footer from './components/Navbar/footer'
+import Freiends from './components/Navbar/freids'
 
 function App() {
   return (
     <>
      <Navbar/>
     <Hero/>
-    <Prodect/>
+    
+    <Freiends/>
     
     <Testimonial/>
     <Footer/>
